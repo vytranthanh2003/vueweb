@@ -1,0 +1,59 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0; /* Bỏ margin mặc định */
+  padding: 0; /* Bỏ padding mặc định */
+}
+
+/* Header and Footer */
+.header-footer {
+  background-color: #1976d2;
+  color: white;
+  text-align: center;
+  padding: 15px; /* Tăng padding cho header/footer */
+  font-size: 1.2em; /* Tăng kích thước chữ */
+}
+
+.footer {
+  background-color: #1565c0;
+  color: white;
+  padding: 15px; /* Tăng padding cho footer */
+  text-align: center;
+  font-size: 1em; /* Kích thước chữ footer */
+}
+
+/* Vuetify Card styling */
+.v-card {
+  cursor: pointer;
+  background-color: #e3f2fd;
+  padding: 20px;
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng cho shadow */
+  min-height: 150px; /* Đảm bảo chiều cao thẻ đồng đều */
+  border-radius: 8px; /* Thêm bo góc cho thẻ */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm shadow nhẹ cho thẻ */
+}
+
+.v-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Tăng độ shadow khi hover */
+}
+
+.v-card-title {
+  font-size: 1.5em;
+  color: #0d47a1;
+  text-align: center;
+  margin-top: 10px; /* Tăng khoảng cách giữa tiêu đề và hình ảnh */
+}
+
+/* Responsive design for cards */
+@media (max-width: 600px) {
+  .v-card {
+    margin: 10px; /* Giảm margin trên màn hình nhỏ */
+  }
+
+  .v-card-title {
+    font-size: 1.3em; /* Giảm kích thước chữ cho tiêu đề trên màn hình nhỏ */
+  }
+}
