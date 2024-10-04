@@ -3,7 +3,6 @@
     <Header />
     <v-row class="my-4">
       <v-col cols="12">
-        
         <v-text-field
           v-model="searchQuery"
           label="Tìm kiếm loại rác..."

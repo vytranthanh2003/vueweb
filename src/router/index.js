@@ -1,25 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import TrashCategoryView from '../views/TrashCategoryView.vue';
+import LoginView from '../views/LoginView.vue'; // Import LoginView nếu có
+import RegisterView from '../views/RegisterView.vue'; // Import RegisterView nếu có
+import TrashCategoryView from '../views/TrashCategoryView.vue'; // Import TrashCategoryView mới
 
-// Định nghĩa các route cho ứng dụng
 const routes = [
   {
     path: '/',
-    name: 'Home', // Tên route cho trang chính
-    component: HomeView // Component cho route này
+    name: 'Home',
+    component: HomeView,
   },
   {
-    path: '/category/:type', // Đường dẫn cho từng loại rác
-    name: 'TrashCategory', // Tên route cho trang phân loại rác
-    component: TrashCategoryView // Component cho route này
-  }
+    path: '/login',
+    name: 'Login',
+    component: LoginView,
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: RegisterView,
+  },
+  {
+    path: '/category/:type', // Đường dẫn có tham số `type`
+    name: 'TrashCategory',
+    component: TrashCategoryView,
+    props: true, // Truyền tham số `type` như props cho component
+  },
 ];
 
-// Tạo router
 const router = createRouter({
-  history: createWebHistory(), // Sử dụng lịch sử trình duyệt HTML5
-  routes // Thêm các route vào router
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
 });
 
-export default router; // Xuất router để sử dụng trong ứng dụng
+export default router;
